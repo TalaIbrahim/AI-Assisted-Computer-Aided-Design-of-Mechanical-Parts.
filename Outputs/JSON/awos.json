@@ -1,0 +1,291 @@
+{
+    "metadata": {
+        "component_name": "ring"
+    },
+    "timeline": [
+        {
+            "index": 0,
+            "entity": "entity1"
+        },
+        {
+            "index": 1,
+            "entity": "entity2"
+        }
+    ],
+    "entities": {
+        "entity1": {
+            "name": "Sketch1",
+            "type": "Sketch",
+            "points": {
+                "origin": {
+                    "type": "Point3D",
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "point1": {
+                    "type": "Point3D",
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "point2": {
+                    "type": "Point3D",
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "curves": {
+                "outer_circle": {
+                    "type": "SketchCircle",
+                    "construction_geom": false,
+                    "fixed": false,
+                    "fully_constrained": true,
+                    "reference": false,
+                    "visible": true,
+                    "center_point": "point1",
+                    "radius": 10
+                },
+                "inner_circle": {
+                    "type": "SketchCircle",
+                    "construction_geom": false,
+                    "fixed": false,
+                    "fully_constrained": true,
+                    "reference": false,
+                    "visible": true,
+                    "center_point": "point2",
+                    "radius": 5
+                }
+            },
+            "constraints": {
+                "constraint1": {
+                    "entity": "origin",
+                    "point": "point1",
+                    "type": "CoincidentConstraint"
+                },
+                "constraint2": {
+                    "curve_one": "inner_circle",
+                    "curve_two": "outer_circle",
+                    "type": "ConcentricConstraint"
+                }
+            },
+            "dimensions": {
+                "d_outer": {
+                    "parameter": {
+                        "type": "ModelParameter",
+                        "value": 20,
+                        "name": "d1_35",
+                        "role": "Diameter Dimension-2"
+                    },
+                    "is_driving": true,
+                    "curve": "outer_circle",
+                    "type": "SketchDiameterDimension"
+                },
+                "d_inner": {
+                    "parameter": {
+                        "type": "ModelParameter",
+                        "value": 10,
+                        "name": "d2_35",
+                        "role": "Diameter Dimension-3"
+                    },
+                    "is_driving": true,
+                    "curve": "inner_circle",
+                    "type": "SketchDiameterDimension"
+                }
+            },
+            "profiles": {
+                "profile1": {
+                    "loops": [
+                        {
+                            "is_outer": true,
+                            "profile_curves": [
+                                {
+                                    "type": "Circle3D",
+                                    "center_point": {
+                                        "type": "Point3D",
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "radius": 10,
+                                    "normal": {
+                                        "type": "Vector3D",
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 1.0,
+                                        "length": 1.0
+                                    },
+                                    "curve": "outer_circle"
+                                }
+                            ]
+                        },
+                        {
+                            "is_outer": false,
+                            "profile_curves": [
+                                {
+                                    "type": "Circle3D",
+                                    "center_point": {
+                                        "type": "Point3D",
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "radius": 5,
+                                    "normal": {
+                                        "type": "Vector3D",
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 1.0,
+                                        "length": 1.0
+                                    },
+                                    "curve": "inner_circle"
+                                }
+                            ]
+                        }
+                    ],
+                    "properties": {
+                        "area": 225.0,
+                        "centroid": {
+                            "type": "Point3D",
+                            "x": 0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "perimeter": 62.83
+                    }
+                },
+                "profile2": {
+                    "loops": [
+                        {
+                            "is_outer": true,
+                            "profile_curves": [
+                                {
+                                    "type": "Circle3D",
+                                    "center_point": {
+                                        "type": "Point3D",
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "radius": 5,
+                                    "normal": {
+                                        "type": "Vector3D",
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 1.0,
+                                        "length": 1.0
+                                    },
+                                    "curve": "inner_circle"
+                                }
+                            ]
+                        }
+                    ],
+                    "properties": {
+                        "area": 78.53981633974483,
+                        "centroid": {
+                            "type": "Point3D",
+                            "x": 0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "perimeter": 31.41592653589793
+                    }
+                }
+            },
+            "transform": {
+                "origin": {
+                    "type": "Point3D",
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "x_axis": {
+                    "type": "Vector3D",
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "length": 1.0
+                },
+                "y_axis": {
+                    "type": "Vector3D",
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -1.0,
+                    "length": 1.0
+                },
+                "z_axis": {
+                    "type": "Vector3D",
+                    "x": 0.0,
+                    "y": 1.0,
+                    "z": 0.0,
+                    "length": 1.0
+                }
+            },
+            "reference_plane": {
+                "type": "ConstructionPlane",
+                "name": "XZ",
+                "plane": {
+                    "type": "Plane",
+                    "origin": {
+                        "type": "Point3D",
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "normal": {
+                        "type": "Vector3D",
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0,
+                        "length": 1.0
+                    },
+                    "u_direction": {
+                        "type": "Vector3D",
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0,
+                        "length": 1.0
+                    },
+                    "v_direction": {
+                        "type": "Vector3D",
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "length": 1.0
+                    }
+                }
+            }
+        },
+        "entity2": {
+            "name": "Extrude1",
+            "type": "ExtrudeFeature",
+            "profiles": [
+                {
+                    "profile": "profile1",
+                    "sketch": "entity1"
+                }
+            ],
+            "operation": "NewBodyFeatureOperation",
+            "start_extent": {
+                "type": "ProfilePlaneStartDefinition"
+            },
+            "extent_type": "OneSideFeatureExtentType",
+            "extent_one": {
+                "distance": {
+                    "type": "ModelParameter",
+                    "value": 15,
+                    "name": "d3_35",
+                    "role": "AlongDistance"
+                },
+                "taper_angle": {
+                    "type": "ModelParameter",
+                    "value": 0.0,
+                    "name": "d4_28",
+                    "role": "TaperAngle"
+                },
+                "type": "DistanceExtentDefinition"
+            }
+        }
+    }
+}
